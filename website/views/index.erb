@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <title>Disaster Dice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-red.css">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <style>
+            ::-moz-selection { /* Code for Firefox */
+                color: white;
+                background: red;
+            }
+            ::selection {
+                color: white;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="w3-navbar w3-dark-grey w3-large">
+                <li><a href="/">Home</a></li>
+                <li><a href="/customize">Customize</a></li>
+                <li><a href="/about">About</a></li>
+        </ul>
+        <div class="w3-container w3-red">
+            <h1>Disaster Dice</h1>
+        </div>
+        <div class="w3-container w3-center w3-animate-opacity" width=50%>
+        <h1>Make your own custom dice!</h1>
+        <img src="http://i.imgur.com/zArBb5T.gif" alt="d6" height=128px draggable="false">
+        <img src="http://i.imgur.com/knglTaz.gif" alt="d8" height=128px draggable="false">
+        <img src="http://i.imgur.com/fTlBwhX.gif" alt="d12" height=128px draggable="false">
+        <img src="http://i.imgur.com/Y2uv84o.gif" alt="d20" height=128px draggable="false">
+        <p></p>
+        <form action="/customize">
+            <input class="w3-btn w3-xxlarge w3-red" type="submit" value="Get Started!" style="margin:2em; align:center">
+        </form>
+        </div>
+        <footer class="w3-container w3-dark-grey" style="position:absolute; right:0; bottom:0; left:0; text-align:center;">
+            <p>Created for HackCWRU 2016!</p>
+        </footer>
+    </body>
+</html>
+

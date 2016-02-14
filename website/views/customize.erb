@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <title>Disaster Dice</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-red.css">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <style>
+            ::-moz-selection { /* Code for Firefox */
+                color: white;
+                background: red;
+            }
+            ::selection {
+                color: white;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="w3-navbar w3-dark-grey w3-large">
+                <li><a href="/">Home</a></li>
+                <li><a href="/customize">Customize</a></li>
+                <li><a href="/about">About</a></li>
+        </ul>
+        <div class="w3-container w3-red">
+            <h1>Dice Creation</h1>
+        </div>
+
+        <p></p>
+
+        <div class="w3-card-4">
+        <form action="/customize/" method="POST" class="w3-row" id="form" enctype="multipart/form-data">
+            <div class="w3-col m3 l2">
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <h2>Type</h2>
+                    </div>
+                    <input class="w3-radio" name="sides" id="sides_6" type="radio" value="6" checked>
+                    <label class="w3-validate">Six-sided (d6)</label>
+                    <p>
+                    <input class="w3-radio" name="sides" id="sides_8" type="radio" value="8">
+                    <label class="w3-validate">Eight-sided (d8)</label></p>
+                    <p>
+                    <input class="w3-radio" name="sides" id="sides_10" type="radio" value="10">
+                    <label class="w3-validate">Ten-sided (d10)</label></p>
+                    <p>
+                    <input class="w3-radio" name="sides" id="sides_12" type="radio" value="12">
+                    <label class="w3-validate">Twelve-sided (d12)</label></p>
+                    <p>
+                    <input class="w3-radio" name="sides" id="sides_20" type="radio" value="20">
+                    <label class="w3-validate">Twenty-sided (d20)</label></p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="w3-col m3 l2">
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <h2>Size</h2>
+                    </div>
+                    <select class="w3-select" name="size">
+                    <option value="null" disabled selected>Choose a size</option>
+                    <option value="0.75">3/4 inch</option>
+                    <option value="1.00">1 inch</option>
+                    <option value="1.25">1 1/4 inch</option>
+                    <option value="1.50">1 1/2 inch</option>
+                    <option value="1.75">1 3/4 inch</option>
+                    <option value="2.00">2 inch</option>
+                    </select>
+                    <p></p>
+                </div>
+            </div>
+            <div class="w3-col m4 l3">
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <h2>Face Images</h2>
+                    </div>
+                    <div id= "image_loader" max-height=5in>
+                        <input type="file" name="image_0" accept="image/*">
+                        <p>
+                        <input type="file" name="image_1" accept="image/*"></p>
+                        <p>
+                        <input type="file" name="image_2" accept="image/*"></p>
+                        <p>
+                        <input type="file" name="image_3" accept="image/*"></p>
+                        <p>
+                        <input type="file" name="image_4" accept="image/*"></p>
+                        <p>
+                        <input type="file" name="image_5" accept="image/*"></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button class="w3-btn w3-red" type="submit" form="form" value="submit" style="margin:2em; margin-top:1em">Submit Options</button>
+        </div>
+        <div class="w3-container" style="margin:2em">
+            <p>&nbsp;</p>
+        </div>
+        <footer class="w3-container w3-dark-grey w3-bottom" style="text-align:center">
+            <p>Created for HackCWRU 2016!</p>
+        </footer>
+    </body>
+
+    <script>
+        $('.w3-radio').on('click', function(){
+            var sides = parseInt($(this).attr('id').substring("sides_".length));
+            var html_string = "";
+            for (i = 0; i < sides; i++){
+                html_string += "<p><input type=\"file\" name=\"image_" + i + "\" accept=\"image/*\"></p>"
+            }
+            $('#image_loader').html(html_string);
+        });
+    </script>
+</html>
+
