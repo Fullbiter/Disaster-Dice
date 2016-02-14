@@ -1,1 +1,0 @@
-{"sides"=>"6", "size"=>"1.00", "image_0"=>{:filename=>"250px-054Psyduck.png", :type=>"image/png", :name=>"image_0", :tempfile=>#<File:/tmp/RackMultipart20160214-2371-e6zrkc.png>, :head=>"Content-Disposition: form-data; name=\"image_0\"; filename=\"250px-054Psyduck.png\"\r\nContent-Type: image/png\r\n"}}
