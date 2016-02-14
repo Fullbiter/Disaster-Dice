@@ -6,7 +6,7 @@ Making custom dice models
 In no particular order...
 
 - Add names to footer
-- Cronjob to run the ruby app to prevent the server from going down
+- Cronjob to run the ruby app to prevent downtime
 - On homepage, fix start button and footer locations on mobile
 - Add preview functionality for uploaded images
 - Add numbering to image upload buttons
